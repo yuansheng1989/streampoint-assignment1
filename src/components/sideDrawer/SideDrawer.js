@@ -5,6 +5,7 @@ import { connect } from "react-redux";
 import { setSideDrawer, setCardId } from "../../redux/sideDrawer/actions";
 import { editCard } from "../../redux/cards/actions";
 import { SettingOutlined, FormatPainterOutlined } from "@ant-design/icons";
+import styles from "./index.module.scss";
 
 const mapStateToProps = (state) => {
   return {
@@ -44,7 +45,7 @@ const SideDrawer = (props) => {
         cornerRadius: card?.cornerRadius,
       });
     }
-  }, [cardId]);
+  }, [cardId]); // eslint-disable-line
 
   const handleCardDataChange = () => {
     const newCard = { ...card, ...cardDataForm.getFieldsValue(true) };
@@ -73,6 +74,7 @@ const SideDrawer = (props) => {
 
   return (
     <Drawer
+      className={styles.side_drawer}
       placement="right"
       closable={false}
       getContainer={false}
@@ -83,13 +85,14 @@ const SideDrawer = (props) => {
       }}
       visible={sideDrawerVisible}
       maskStyle={{ backgroundColor: "transparent" }}
+      width={280}
     >
-      <Tabs defaultActiveKey="1">
+      <Tabs defaultActiveKey="1" centered>
         <TabPane
           tab={
             <div
               style={{
-                width: "30px",
+                width: "90px",
                 display: "flex",
                 justifyContent: "center",
               }}
@@ -120,7 +123,7 @@ const SideDrawer = (props) => {
           tab={
             <div
               style={{
-                width: "30px",
+                width: "90px",
                 display: "flex",
                 justifyContent: "center",
               }}
@@ -130,7 +133,11 @@ const SideDrawer = (props) => {
           }
           key="2"
         >
-          <Form layout="vertical" form={cardStyleForm} style={{height: "650px"}}>
+          <Form
+            layout="vertical"
+            form={cardStyleForm}
+            style={{ height: "650px" }}
+          >
             <h3 style={{ color: "#1890ff", fontWeight: "normal" }}>Title</h3>
             <div style={{ display: "flex" }}>
               <Form.Item name="titleSize" label="Size">
@@ -164,10 +171,7 @@ const SideDrawer = (props) => {
                 />
               </Form.Item>
               <Form.Item label="Color" style={{ marginLeft: "20px" }}>
-                <ColorPicker
-                  color={card?.bodyColor}
-                  setColor={setBodyColor}
-                />
+                <ColorPicker color={card?.bodyColor} setColor={setBodyColor} />
               </Form.Item>
             </div>
             <Divider />
