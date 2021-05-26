@@ -1,0 +1,12 @@
+.header-layout-background {
+  background: #fff;
+}
+
+.page-layout {
+  min-height: 100vh;
+}
+
+.site-drawer-render-in-content-layout {
+  position: relative;
+  overflow: hidden;
+}
