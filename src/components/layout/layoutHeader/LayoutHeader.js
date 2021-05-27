@@ -8,7 +8,10 @@ const LayoutHeader = () => {
   return (
     <Header className="header-layout-background">
       <h1>
-        <span style={{ color: "red" }}>SPS</span>ASGMT
+        <span style={{ color: "#ed186d", fontWeight: "900", fontSize: "30px" }}>
+          SPS
+        </span>
+        <span style={{ fontWeight: "400", fontSize: "30px" }}>ASGMT</span>
       </h1>
     </Header>
   );

@@ -150,12 +150,15 @@ const SideDrawer = (props) => {
                   onChange={handleCardStyleChange}
                 />
               </Form.Item>
-              <Form.Item label="Color" style={{ marginLeft: "20px" }}>
-                <ColorPicker
-                  color={card?.titleColor}
-                  setColor={setTitleColor}
-                />
-              </Form.Item>
+              <div style={{ marginLeft: "20px" }}>
+                <div style={{ marginBottom: "10px" }}>Color</div>
+                <div>
+                  <ColorPicker
+                    color={card?.titleColor}
+                    setColor={setTitleColor}
+                  />
+                </div>
+              </div>
             </div>
             <Divider />
             <h3 style={{ color: "#1890ff", fontWeight: "normal" }}>Body</h3>
@@ -170,9 +173,15 @@ const SideDrawer = (props) => {
                   onChange={handleCardStyleChange}
                 />
               </Form.Item>
-              <Form.Item label="Color" style={{ marginLeft: "20px" }}>
-                <ColorPicker color={card?.bodyColor} setColor={setBodyColor} />
-              </Form.Item>
+              <div style={{ marginLeft: "20px" }}>
+                <div style={{ marginBottom: "10px" }}>Color</div>
+                <div>
+                  <ColorPicker
+                    color={card?.bodyColor}
+                    setColor={setBodyColor}
+                  />
+                </div>
+              </div>
             </div>
             <Divider />
             <h3 style={{ color: "#1890ff", fontWeight: "normal" }}>Panel</h3>
@@ -187,12 +196,15 @@ const SideDrawer = (props) => {
                   onChange={handleCardStyleChange}
                 />
               </Form.Item>
-              <Form.Item label="Color" style={{ marginLeft: "20px" }}>
-                <ColorPicker
-                  color={card?.panelColor}
-                  setColor={setPanelColor}
-                />
-              </Form.Item>
+              <div style={{ marginLeft: "20px" }}>
+                <div style={{ marginBottom: "10px" }}>Color</div>
+                <div>
+                  <ColorPicker
+                    color={card?.panelColor}
+                    setColor={setPanelColor}
+                  />
+                </div>
+              </div>
             </div>
           </Form>
         </TabPane>

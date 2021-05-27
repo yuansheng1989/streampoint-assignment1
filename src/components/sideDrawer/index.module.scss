@@ -2,11 +2,11 @@
   :global {
     .ant-drawer-content {
       border-top-left-radius: 20px;
-      //box-shadow: inset 0 6px 16px -8px rgb(0 0 0 / 8%);
+      box-shadow: inset 5px 5px 16px -8px rgb(0 0 0 / 8%);
     }
 
     .ant-drawer-content-wrapper {
-      box-shadow: none;
+      box-shadow: none !important;
     }
   }
 }

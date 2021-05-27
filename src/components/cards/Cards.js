@@ -43,8 +43,9 @@ const Cards = (props) => {
           style={{ margin: "30px 0px", borderRadius: card.cornerRadius, backgroundColor: card.panelColor }}
           key={card.id}
           bordered={false}
+          hoverable
         >
-          <div style={{ display: "flex", justifyContent: "space-between" }}>
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
             <h1
               style={{
                 fontSize: card.titleSize,
@@ -54,7 +55,7 @@ const Cards = (props) => {
             >
               {card.title}
             </h1>
-            <div>
+            <div style={{display: "flex", flexWrap: "nowrap"}}>
               <Button
                 type="link"
                 icon={<EditOutlined />}

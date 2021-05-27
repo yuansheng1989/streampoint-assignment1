@@ -62,7 +62,7 @@ class ColorPicker extends React.Component {
       },
     });
     return (
-      <div>
+      <div style={{ position: "relative" }}>
         <div style={styles.swatch} onClick={this.handleClick}>
           <div style={styles.color} />
         </div>
@@ -71,6 +71,18 @@ class ColorPicker extends React.Component {
             <div style={styles.cover} onClick={this.handleClose} />
             <BlockPicker
               color={this.state.color}
+              colors={[
+                "#000000",
+                "#D9E3F0",
+                "#F47373",
+                "#697689",
+                "#37D67A",
+                "#2CCCE4",
+                "#555555",
+                "#dce775",
+                "#ff8a65",
+                "#ba68c8",
+              ]}
               onChange={this.handleChange}
             />
           </div>
