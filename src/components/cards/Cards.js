@@ -43,7 +43,6 @@ const Cards = (props) => {
           style={{ margin: "30px 0px", borderRadius: card.cornerRadius, backgroundColor: card.panelColor }}
           key={card.id}
           bordered={false}
-          hoverable
         >
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
             <h1

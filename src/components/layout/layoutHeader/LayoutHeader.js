@@ -7,7 +7,7 @@ const { Header } = Layout;
 const LayoutHeader = () => {
   return (
     <Header className="header-layout-background">
-      <h1>
+      <h1 style={{ userSelect: "none" }}>
         <span style={{ color: "#ed186d", fontWeight: "900", fontSize: "30px" }}>
           SPS
         </span>
