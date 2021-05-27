@@ -12,7 +12,7 @@ const initState = {
       cornerRadius: 16,
       titleColor: "#000000",
       bodyColor: "#000000",
-      panelColor: "#ffffff"
+      panelColor: "#ffffff",
     },
   ],
 };
@@ -25,8 +25,6 @@ const CardsReducer = (state = initState, action) => {
       let newCard = {
         ...newCards.filter((card) => card.id === action.payload.id)[0],
         id: uuidv4(),
-        title: action.payload.title,
-        body: action.payload.body,
       };
       newCards.splice(
         newCards.findIndex((card) => card.id === action.payload.id) + 1,
